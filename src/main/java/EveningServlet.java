@@ -14,9 +14,11 @@ public class EveningServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         var writer = resp.getWriter();
         HttpSession httpSession = req.getSession();
-        String name = "";
         httpSession.setAttribute("name",req.getParameter("name"));
-        if(req.getParameter("name") != null){
+        String name = "";
+
+        if(req.getParameter("name") == null){
+
             name = (String) httpSession.getAttribute("name");
         } else {
             name = "my friend";
