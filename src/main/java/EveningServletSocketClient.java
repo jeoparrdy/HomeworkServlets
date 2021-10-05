@@ -11,9 +11,9 @@ public class EveningServletSocketClient {
             var writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
             var reader = new BufferedReader(new InputStreamReader(socket.getInputStream()))){
             String name = "Serhii%20Feshchuk";
-            writer.println("GET /evening?name="+name+" HTTP/1.1");
+            writer.println("GET /evening HTTP/1.1");
             writer.println("Host: " + InetAddress.getLocalHost().getHostAddress());
-            //writer.println("Cookie: JSESSIONID=80618367C4B68BD99C805C57D9BC5CE0");
+            writer.println("Cookie: JSESSIONID=BFD3C4F0B5EC4E47B5F0D97B992DD1F4");
             writer.println();
             writer.flush();
             reader.lines().forEach(System.out::println);
