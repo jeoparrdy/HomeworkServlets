@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 @WebServlet("/message")
 public class MessageServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         var reader = new BufferedReader(new InputStreamReader(req.getInputStream()));
 
